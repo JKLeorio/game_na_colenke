@@ -2,7 +2,8 @@ import pygame
 import sys
 import pathlib
 from program_logic import *
-from database import get_best, cur, add_player
+from database import get_best, add_player
+
 
 def draw_interface(score, delta=0):
     pygame.draw.rect(screen, WHITE, TITLE_REC)
@@ -28,7 +29,6 @@ def draw_interface(score, delta=0):
                 text_x = w + (SIZE_BLOCKS - font_w) / 2
                 text_y = h + (SIZE_BLOCKS - font_h) / 2
                 screen.blit(text, (text_x, text_y))
-
 
 
 BLOCKS = 4
@@ -100,7 +100,7 @@ def draw_top_gamers():
 
 
 def draw_intro():
-    img2048 = pygame.image.load(pathlib.Path('2048.png'))
+    img2048 = pygame.image.load(pathlib.Path("2048.png"))
     font = pygame.font.SysFont("stxingkai", 70)
     text_welcome = font.render("Welcome!", True, WHITE)
     name = "Введите имя"
