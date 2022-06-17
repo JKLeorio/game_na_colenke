@@ -137,7 +137,7 @@ def draw_intro():
 
 def draw_game_over():
     global USERNAME, GAMERS_DB
-    img2048 = pygame.image.load("C:\\Users\\Akira\\Documents\\VScode\\2048\\2048.png")
+    img2048 = pygame.image.load(pathlib.Path("2048.png"))
     font = pygame.font.SysFont("stxingkai", 70)
     text_game_over = font.render("Game over!", True, WHITE)
     text_score = font.render(f"Вы набрали {score}: ", True, WHITE)
